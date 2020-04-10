@@ -11,4 +11,9 @@ There are several ways to go about obtaining the .jar for the server & client:
 - Another way is to go to the .minecraft folder (Windows), and go to /versions and find the .jar file based on the version. There will also be a .json file, which will contain a link to server.jar
 
 ### Obsfucation
-The Minecraft .jar files are obsfucated & optimized by a program called ProGuard. In essence, this means that the code is almost unreadable, as all variable, method, and class names will be coverted to nonsensical names like `a`, `aa`, `aaa`. However, this program also generates a .txt file containing the mappings from the nonsensical (obsfucated) names, back to the originals.
+The Minecraft .jar files are obsfucated & optimized by a program called ProGuard. In essence, this means that the code is almost unreadable, as all variable, method, and class names will be coverted to nonsensical names like `a`, `aa`, `aaa`. However, this program also generates a .txt file containing the mappings from the nonsensical (obsfucated) names, back to the originals. These mappings can be found in the aforementioned .json file in the .minecraft/versions/<version> folder, and it will be called either `client.txt` or `server.txt`.
+ 
+By using this tool by LXGaming <https://github.com/LXGaming/Reconstruct>, we can use the mappings on the client/server .jar files to turn them into their deobsfucated versions.
+
+### Decompilation
+There is a program called FernFlower that can be used to decompile the .jar files. First, we extract the .jar file to its own folder, then we obtain the FernFlower release that's used in Spigot. Since Spigot's BuildTools are used specifically to decompile Minecraft code, we can reasonably trust that it will be reliable with decompiling the .jar files we need. 
