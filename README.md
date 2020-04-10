@@ -9,3 +9,6 @@ There are several ways to go about obtaining the .jar for the server & client:
 
 - One way is to go to <https://mcversions.net/> and find the server.jar and client.jar for the version you're interested in
 - Another way is to go to the .minecraft folder (Windows), and go to /versions and find the .jar file based on the version. There will also be a .json file, which will contain a link to server.jar
+
+### Obsfucation
+The Minecraft .jar files are obsfucated & optimized by a program called ProGuard. In essence, this means that the code is almost unreadable, as all variable, method, and class names will be coverted to nonsensical names like `a`, `aa`, `aaa`. However, this program also generates a .txt file containing the mappings from the nonsensical (obsfucated) names, back to the originals.
