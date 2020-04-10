@@ -1,5 +1,5 @@
 # REPLACE WITH FILE TO CLEAN
-FILE = "14infinite_14a.csv"
+FILE = "13b_14infinite.csv"
 
 # Open the report file
 report = open( "reports/" + FILE, "r" )
@@ -24,13 +24,12 @@ for l in range( len( lines ) ):
 			result = line[ 2 ].lower()
 			# Only report files with differences
 			if result.find( "identical" ) == -1:
-				if not result.find( "folder" ) == -1:
-					name += "\\"
-				name += "\n"
-				if len( folder ) == 0:
-					newlines.append( name )
-				else:
-					newlines.append( folder + "\\" + name )
+				if result.find( "folder" ) == -1:
+					name += "\n"
+					if len( folder ) == 0:
+						newlines.append( name )
+					else:
+						newlines.append( folder + "\\" + name )
 
 # Sort the output
 newlines.sort()
